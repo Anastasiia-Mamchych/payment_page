@@ -44,7 +44,7 @@ const PaymentForm = ({ onSuccess }) => {
       <form className="payment-form" onSubmit={handleSubmit}>
         <div className="back-link-wrapper">
           <a
-            href="javascript:void(0)"
+            href="#"
             className={`back-link ${isBackHovered ? "hovered" : ""}`}
             onMouseEnter={() => setIsBackHovered(true)}
             onMouseLeave={() => setIsBackHovered(false)}
