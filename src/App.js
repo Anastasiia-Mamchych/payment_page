@@ -10,6 +10,8 @@ function App() {
   const [cardLast4, setCardLast4] = useState("");
   const amount = 299.99;
   const companyName = "solid";
+  
+<p style={{ color: 'red' }}>Test message</p>
 
   return (
     <div className="app-container">
