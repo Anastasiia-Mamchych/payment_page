@@ -1,42 +1,56 @@
-import React, { useState } from "react";
-import "../styles/OrderSummary.css";
+import React from "react";
+import "../styles/SuccessMessage.css";
 
-const OrderSummary = () => {
-  const [language, setLanguage] = useState("uk");
-  const success = false;
+const SuccessMessage = ({ amount, last4, company, onBack }) => {
+  const transactionId = "#TXN" + Math.floor(Math.random() * 10000000);
+  const now = new Date();
+  const date = now.toLocaleDateString("uk-UA", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  const time = now.toLocaleTimeString("uk-UA", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   return (
-    <div className="order-summary-wrapper">
-      {!success && (
-        <div className="language-switcher">
-          <button
-            className={`lang ${language === "en" ? "active" : ""}`}
-            onClick={() => setLanguage("en")}
+    <div className="success-wrapper">
+      <div className="success-container">
+        <div className="check-icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Eng
-          </button>
-          <button
-            className={`lang ${language === "uk" ? "active" : ""}`}
-            onClick={() => setLanguage("uk")}
-          >
-            Укр
-          </button>
+            <path
+              d="M20 6L9 17L4 12"
+              stroke="#4CAF50"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
-      )}
-      <aside className="order-summary">
-        <p className="title">Order info &lt;= 100 char.</p>
-        <p className="description">Description &lt;= 400 char.</p>
-        <div className="product">
-          <p>Lamel Professional Smart Skin Compact Powder</p>
-          <p className="gray">Пудра для обличчя</p>
+
+        <h2>Оплату успішно здійснено!</h2>
+        <p>Дякуємо за вашу покупку!</p>
+
+        <div className="receipt-box">
+          <p><strong>Сума:</strong> {amount.toFixed(2)} UAH</p>
+          <p><strong>Спосіб оплати:</strong> Visa •••• {last4}</p>
+          <p><strong>Дата і час:</strong> {date}, {time}</p>
+          <p><strong>Номер транзакції:</strong> {transactionId}</p>
+          <p><strong>Отримувач:</strong> {company}</p>
         </div>
-        <div className="price-box">
-          <p className="highlight">5 days free</p>
-          <p className="subtext">then 299.99 UAH per month</p>
-        </div>
-      </aside>
+
+        <button className="home-button" onClick={onBack}>Повернутись на головну</button>
+        <button className="pdf-button">Завантажити квитанцію (PDF)</button>
+      </div>
     </div>
   );
 };
 
-export default OrderSummary;
+export default SuccessMessage;
