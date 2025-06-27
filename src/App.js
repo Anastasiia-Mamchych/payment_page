@@ -8,7 +8,7 @@ function App() {
   const [success, setSuccess] = useState(false);
 
   const [cardLast4, setCardLast4] = useState("");
-  const [amount, setAmount] = useState(299.99); 
+  const amount = 299.99;
   const companyName = "solid";
 
   return (
