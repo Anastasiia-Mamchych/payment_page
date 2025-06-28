@@ -1,7 +1,7 @@
 .payment-form {
   transform: translateY(25px);
   width: 420px;
-  padding: 2rem;
+  padding: 32px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -33,21 +33,21 @@
 
 .back-link-wrapper {
   margin-left: -16px;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .back-link-text {
   position: relative;
   display: inline-block;
-  width: 80px; /* цього достатньо для обох слів, можеш підігнати */
-  line-height: 1; /* прибирає зайвий відступ */
+  width: 80px; 
+  line-height: 1; 
   vertical-align: middle;
 }
 
 .back-link-text span {
   position: absolute;
   top: 50%;
-  transform: translateY(-54%); /* трохи піднімає */
+  transform: translateY(-54%); 
   left: 0;
   transition: opacity 0.2s ease;
 }
@@ -61,7 +61,7 @@
 }
 
 .arrow-icon {
-  margin-right: 0.5rem;
+  margin-right: 8px;
 }
 
 .payment-form h2 {
@@ -75,7 +75,7 @@
   font-size: 16px;
   font-weight: 500;
   color: #666C7B;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .apple-pay {
@@ -91,7 +91,7 @@
   border-radius: 9px;
   font-size: 19px;
   cursor: pointer;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   transition: all 0.2s ease;
   transform: translateY(0);
   box-shadow: none;
@@ -117,7 +117,7 @@
   align-items: center;
   color: #666C7B;
   font-size: 14px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .divider hr {
@@ -128,11 +128,11 @@
 }
 
 .divider span {
-  margin: 0 1rem;
+  margin: 0 16px;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 label {
@@ -140,7 +140,7 @@ label {
   font-size: 12px;
   font-weight: 500;
   color: #666C7B;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 input {
@@ -150,7 +150,7 @@ input {
   font-size: 14px;
   border: 1px solid #C7C9D1;
   border-radius: 6px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -166,7 +166,7 @@ input:focus {
   flex-direction: row;
   gap: 8px;
   width: 420px;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 
 .expiry-field,
@@ -261,7 +261,7 @@ input:focus {
   font-weight: 400;
   line-height: 16px;
   color: #666C7B;
-  margin-top: 1.5rem;
+  margin-top: 24px;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -270,7 +270,7 @@ input:focus {
 
 .pay-btn {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 16px;
   background: #028837;
   color: white;
   font-size: 16px;
@@ -287,7 +287,7 @@ input:focus {
 }
 
 .pay-btn:hover:not(:disabled) {
-  background: hsl(144, 97%, 31%);
+  background: #028837;
   transform: translateY(-2px);
 }
 
