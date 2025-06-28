@@ -65,7 +65,10 @@ const PaymentForm = ({ onSuccess }) => {
                 strokeLinejoin="round"
               />
             </svg>
-            <span>{isBackHovered ? "Back" : "Checkout"}</span>
+           <span className="back-link-text">
+  <span className={isBackHovered ? "visible" : "hidden"}>Back</span>
+  <span className={!isBackHovered ? "visible" : "hidden"}>Checkout</span>
+</span>
           </a>
         </div>
 

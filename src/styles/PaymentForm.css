@@ -36,6 +36,30 @@
   margin-bottom: 1rem;
 }
 
+.back-link-text {
+  position: relative;
+  display: inline-block;
+  width: 80px; /* цього достатньо для обох слів, можеш підігнати */
+  line-height: 1; /* прибирає зайвий відступ */
+  vertical-align: middle;
+}
+
+.back-link-text span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-54%); /* трохи піднімає */
+  left: 0;
+  transition: opacity 0.2s ease;
+}
+
+.back-link-text .visible {
+  opacity: 1;
+}
+
+.back-link-text .hidden {
+  opacity: 0;
+}
+
 .arrow-icon {
   margin-right: 0.5rem;
 }
@@ -233,6 +257,7 @@ input:focus {
   height: auto;
   border-radius: 8px;
   font-size: 13px;
+  line-height: 18px;
   font-weight: 400;
   line-height: 16px;
   color: #666C7B;
