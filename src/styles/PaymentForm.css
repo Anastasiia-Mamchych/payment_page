@@ -246,7 +246,7 @@ input:focus {
 .pay-btn {
   width: 100%;
   margin-top: 1rem;
-  background: hsl(144, 97%, 27%);
+  background: hsl(0, 97%, 27%);
   color: white;
   font-size: 16px;
   font-weight: 600;
